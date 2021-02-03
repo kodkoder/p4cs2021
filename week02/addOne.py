@@ -1,4 +1,4 @@
-# hello.py
+# addOne.py
 # This program reads on a number and prints out one more than that number
 # author: Tomasz
 
