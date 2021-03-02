@@ -15,5 +15,7 @@ Simple programs
 ## Week 6
 Files
 
+## Week 6
+Regex
 
 
