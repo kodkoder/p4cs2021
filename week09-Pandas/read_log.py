@@ -1,6 +1,7 @@
 import pandas as pd
 import re
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+
 
 path = './data/'
 logFilename = path + 'access.log'
@@ -30,6 +31,13 @@ df.drop(columns=['dash1', 'userId'], inplace=True)
 
 df['time'] = df['time'].apply(lambda x: re.search('[\w:/]+', x).group())
 # for the task you may want to use a normal function instead of lambda
+'''
+def getNewValue(x):
+newvalue = re.search('[\w:/]+', x).group()
+# do your stuff
+return newvalue
+df['time'] = df['time'].apply(getNewValue)
+'''
 # this is not a normal date time format so we need to specify it
 # https://docs.python.org/3/library/datetime.html#strftime-andstrptime-behavior
 # https://pandas.pydata.org/pandasdocs/stable/reference/api/pandas.to_datetime.html?highlight=to_date
