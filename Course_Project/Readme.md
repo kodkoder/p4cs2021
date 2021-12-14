@@ -1,4 +1,4 @@
-# Programming For Cybersecurity course - Prokect
+# Programming For Cybersecurity course - Project
 
 ##  Course Project
 ## Description:
