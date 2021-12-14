@@ -28,7 +28,7 @@ STEP 7 - Exploitation phase.
 
 ## STEP 1 - Cause a crash by interacting with the exposed port
 ### Code:
-[bmi.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/fuzzer.py)
+[step1_fuzzer.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/fuzzer.py)
 
 ## STEP 2 - Identify EIP register position
 ## STEP 3 - Identify available space
