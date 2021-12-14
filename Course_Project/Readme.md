@@ -39,7 +39,9 @@ STEP 7 - Exploitation phase.
 
 
 
-###References:
-https://nvd.nist.gov/vuln/detail/CVE-2003-0264 - Buffer overflow
+### References:
+https://nvd.nist.gov/vuln/detail/CVE-2003-0264 - Buffer overflow in SLMail - CVE details
+
 https://www.exploit-db.com/exploits/638 - POC exploit
+
 https://github.com/R4v3nG/Seattle-Lab-Mail-SLmail-5.5-POP3-PASS-Remote-Buffer-Overflow
