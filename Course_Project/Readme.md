@@ -12,11 +12,17 @@ The project assumes that as a result of a network reconnaisanse a vulnerable sof
 
 ### STEPS TO REPRODUCE:
 STEP 1 - Cause a crash by interacting with the exposed port
+
 STEP 2 - Identify EIP register position
+
 STEP 3 - Identify available space
+
 STEP 4 - Examine Shellcode for bad character
+
 STEP 5 - Find instruction to which execution of application needs to be reditected (to our malicious code)
+
 STEP 6 - Generating a shellcode and updating the exploit
+
 STEP 7 - Exploitation phase
 
 
