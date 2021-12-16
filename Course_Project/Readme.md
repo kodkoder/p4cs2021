@@ -17,7 +17,7 @@ STEP 2 - Identify EIP register position.
 
 STEP 3 - Identify available space for shellcode.
 
-STEP 4 - Examine Shellcode for bad character.
+STEP 4 - Examine Shellcode for bad characters.
 
 STEP 5 - Find instruction to which execution of application needs to be reditected (to our malicious code).
 

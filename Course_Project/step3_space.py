@@ -4,7 +4,8 @@
 #
 #  Take the hex value and identify the offset of where EIP register resides
 #  Again, Kali linus can help us: "/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 4000 -q 39694438"  (where is the hex value)
-#  Add to the buffer a list of possible xec chars so you can identify which stop exploit execution. Usual examples are 0x0A, 0x00. These will need to be excluded during generating our shellcode
+#  Add to the buffer a list of possible hex chars so you can identify which stop exploit execution of our exploit. 
+#  Usual examples are 0x0A, 0x00. These will need to be excluded during generating our shellcode.
 
 import sys
 import socket
