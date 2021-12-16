@@ -28,18 +28,39 @@ STEP 7 - Exploitation phase.
 
 ## STEP 1 - Cause a crash by interacting with the exposed port
 
-[step1_fuzzer.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/fuzzer.py)
+[step1_fuzzer.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step1_fuzzer.py)
 
 ## STEP 2 - Identify EIP register position
+
+[step2_eip.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step2_eip.py)
+
 ## STEP 3 - Identify available space
+
+[step3_space.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step3_space.py)
+
 ## STEP 4 - Examine Shellcode for bad character
+
+[step4_bad_char.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step4_bad_char.py)
+
 ## STEP 5 - Find instruction to which execution of application needs to be reditected (to our malicious code)
+
+[step5_jmp_esp.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step5_jmp_esp.py)
+
 ## STEP 6 - Generating a shellcode and updating the exploit
+
+[step6_shellcode.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step6_shellcode.py)
+
 ## STEP 7 - Exploitation phase
 
+[step7_exploit_final.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step7_exploit_final.py)
 
 
-### References:
+## References:
+
+https://cwe.mitre.org/top25/archive/2021/2021_cwe_top25.html - 2021 CWE Top 25 Most Dangerous Software Weaknesses
+
+https://cwe.mitre.org/data/definitions/119.html  - CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer
+
 https://nvd.nist.gov/vuln/detail/CVE-2003-0264 - Buffer overflow in SLMail - CVE details
 
 https://www.exploit-db.com/exploits/638 - POC exploit

