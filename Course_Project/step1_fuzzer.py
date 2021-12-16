@@ -1,4 +1,5 @@
-# This is code will find some text in an access file
+# Programming For Cybersecurity course - Project
+# Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
 #
 # Author: Tomasz
 #
