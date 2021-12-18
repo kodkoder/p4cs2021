@@ -1,7 +1,7 @@
 # Programming For Cybersecurity course - Project
 # Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
 #
-# Author: Tomasz
+# Author: Tomasz / G00398835
 #
 # This is a skeleton which will be used to develop an exploit.
 
@@ -16,7 +16,7 @@ try:
     PORT = 110
     
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # Connect to IP
-    s.connect((TARGET, PORT))
+    s.connect((TARGET, PORT))          # Target IP/Ports
     data = s.recv(1024)                # Receive Banner
     s.send('USER username'+'\r\n')     # Send Username
     data = s.recv(1024)                # Receive Reply

