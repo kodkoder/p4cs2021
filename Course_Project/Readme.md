@@ -1,7 +1,5 @@
 # Programming For Cybersecurity course - Project
 
-##  Course Project
-
 ## Description:
 Complete a project that demonstrates your knowledge of programming in some area of cybersecurity. This is deliberately vague to allow you to create your own project. This can be a project that you need to complete for work.
 
