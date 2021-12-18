@@ -18,7 +18,7 @@ STEP 3 - Identify available space for shellcode.
 
 STEP 4 - Examine Shellcode for bad characters.
 
-STEP 5 - Find instruction to which execution of application needs to be reditected (to our malicious code).
+STEP 5 - Find instruction to redirect execution flow (to our malicious code).
 
 STEP 6 - Generating a shellcode and updating the exploit.
 
@@ -41,7 +41,7 @@ STEP 7 - Exploitation phase.
 
 [step4_bad_char.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step4_bad_char.py)
 
-## STEP 5 - Find instruction to which execution of application needs to be reditected (to our malicious code)
+## STEP 5 - Find instruction to redirect execution flow
 
 [step5_jmp_esp.py](https://github.com/kodkoder/p4cs2021/blob/main/Course_Project/step5_jmp_esp.py)
 
